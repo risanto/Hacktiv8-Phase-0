@@ -1,3 +1,5 @@
+// Tantangan Array 1 (Mengakses Nilai dalam Array)
+
 function balikString(string) {
 
   var stringBalik = '';
