@@ -1,45 +1,42 @@
 // Palindrome Angka
 
-function angkaPalindrome(num) {
+function angkaPalindrome (num) {
 
-  //1. Convert num into an array
-  
-  var numString = num.toString ();
+  // buat variabel kondisi awal yang mengasumsikan num bukan palindrome
 
-  console.log (numString);
+  var palindrome = false;
 
+  // buat loop untuk mengecek ketika num bukan palindrome
 
-  //2. Loop to find whether the reversed number is equal to the original number
+  while (palindrome === false) {
 
-  var numStringReverse = '';
-  
-  for (var i = numString.length - 1; i >= 0; i--) {
+    // buat variabel untuk contain num yang dibalik dalam bentuk string
     
-    numStringReverse = numStringReverse + numString [i];
+    var numRev = num.toString().split('').reverse().join('');
+
+    // buat beberapa kondisi
+
+    // 1. jika num dan numRev sama DAN num < 10: num tambah 1
+    
+    if (num == numRev && num < 10) {
+      num ++;
+      return num;
+    }
+
+    // 2. jika num dan numRev sama DAN num >= 10: num merupakan palindrome
+
+    else if (num == numRev && num >= 10) {
+      palindrome = true;
+      return num;
+
+    // 3. selain itu, maka terus tambah num sampai berhenti ketika angka merupakan palindrome
+
+    }
+    else {
+      num++
+    }
   }
-
-  if (numStringReverse === numString) {
-
-    console.log (true);
-
-    num ++;
-
-    console.log (num);
-  
-  } else {
-
-    // console.log (false);
-
-    //   while (numStringReverse !== numString) {
-
-    //     num++;
-
-    //     var numStringReverseNum = 0 
-    //   }
-  }
-
 }
-
 
 // TEST CASES
 console.log(angkaPalindrome(8)); // 9
