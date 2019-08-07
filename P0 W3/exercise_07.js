@@ -1,3 +1,5 @@
+// Hitung Jumlah Kata
+
 function hitungJumlahKata(kalimat) {
   
   // ubah variable kalimat menjadi array
