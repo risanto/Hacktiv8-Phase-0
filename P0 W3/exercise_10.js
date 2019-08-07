@@ -1,17 +1,22 @@
 // Perkalian Unik
 
 function perkalianUnik(arr) {
-  var res = [];
+  var resArr = [];
 
   for (i = 0; i < arr.length; i++) {
+    var temp = arr[i];
 
     for (j = 0; j < arr.length; j++) {
-      var arrReduced = arr.reduce((a,b) => a*b);
+      if (i == j) {
+        continue;
+      }
+      else {
+        temp *= arr [j];
+      }
     }
-    res += (arrReduced / arr[i]) + ('\n');
-    var resArr = res.split('\n');
+    resArr.push(temp / arr[i]);
   }
-  return resArr.splice (0, resArr.length-1);
+  return resArr;
 }
 
 // TEST CASES
