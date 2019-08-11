@@ -2,6 +2,8 @@
 
 /*
 Modus adalah angka dari deret yang paling sering muncul
+Jika modus ada lebih dari 1 tampilkan yang paling pertama
+Jika tidak ada modus atau semua angka di array sama, tampilkan -1
 */
 
 function cariModus(arr) {
