@@ -1,25 +1,5 @@
 // Digit Perkalian Minimum
 
-/*
-SET a function that receives 'number' as its argument
-
-  SET var 'count' with 1
-  SET var 'temp' with ""
-  SET var 'res' with ""
-
-  LOOP while 'count' is LESS than 'number'
-    IF 'number' MOD 'count' is EQUAL to 0
-      SET var 'temp' by 'number' JOIN 'count'
-        IF 'res'' length[i-1] is MORE than 'temp''s length[i]
-          SET var 'res' by 'temp
-        END IF
-    END IF
-  DISPLAY 'res'
-
-END FUNCTION
-
-*/
-
 function digitPerkalianMinimum(angka) {
   
   var count = 1;
