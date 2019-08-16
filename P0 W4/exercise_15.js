@@ -1,5 +1,8 @@
 // Highest Score
 
+//CARA 1
+
+/*
 function highestScore (students) {
 
   var res = {};
@@ -24,6 +27,28 @@ function highestScore (students) {
   }
   console.log ("============================")
   return res;
+}
+*/
+
+// CARA 2
+
+function highestScore (students) {
+  
+  var output = {};
+
+  for (i = 0; i < students.length; i++) {
+    if (output[students[i].class] === undefined) {
+      output[students[i].class] = {
+        name: '',
+        score: 0
+      };
+    }
+    if (students[i].score > output[students[i].class].score) {
+      output[students[i].class].name = students[i].name,
+      output[students[i].class].score = students[i].score
+    } 
+  }
+  return output;
 }
 
 // TEST CASE
@@ -54,7 +79,6 @@ console.log(highestScore([
 //   foxes: { name: 'Dimitri', score: 90 },
 //   wolves: { name: 'Alexei', score: 85 }
 // }
-
 
 console.log(highestScore([
   {
