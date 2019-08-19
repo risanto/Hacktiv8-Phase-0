@@ -1,5 +1,6 @@
+// Mengelompokkan Hewan
+
 function groupAnimals(animals) {
-  animals.sort (function(a,b) {return a > b});
 
   // buat variabel penampung animals
 
@@ -24,7 +25,7 @@ function groupAnimals(animals) {
     }
 
     // jika tidak, buat cages baru
-    
+
     else {
       cages.push ([animals[i]]);
     }

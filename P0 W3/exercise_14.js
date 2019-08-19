@@ -1,17 +1,41 @@
+// Mengelompokkan Angka
+
+/*
+[Genap], [Ganjil], [Kelipatan 3]
+
+
+*/
+
 function mengelompokkanAngka(arr) {
+  
+  // Buat variabel penampung hasil akhir
+  
   var res = [];
   
+  // Buat variabel penampung masing-masing kelompok angka
+
   var genap = [];
   var ganjil = [];
   var kelipatan3 = [];
 
+  // Loop untuk mengecek semua elemen di argumen
+
   for (i = 0; i < arr.length; i++) {
+
+    // Jika elemen habis dibagi 3 maka masukkan ke kelompok 'kelipatan3'
+
     if (arr[i] % 3 == 0) {
       kelipatan3.push (arr[i]);
     }
+
+    // Jika elemen habis dibagi 2 maka masukkan ke kelompok 'kelipatan2'
+
     else if (arr[i] % 2 == 0) {
       genap.push (arr [i]);
     }
+
+    // Selain itu berarti bilangan ganjil, yang dimasukkan ke kelompok bilangan ganjil
+    
     else {
       ganjil.push (arr [i]);
     }
