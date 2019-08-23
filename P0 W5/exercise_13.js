@@ -1,30 +1,62 @@
-// Most Frequest Largest Number
+// Most Frequent Highest Number
+
+// Munculkan angka yang paling besar serta berapa kali angka tersebut muncul di arrNumber
 
 function sorting(arrNumber) {
-  // urutkan arrNumber dari yang paling besar dan return arr[0]
 
-  var res = arrNumber.sort(function(a,b){return b-a});
+  var temp = 0;
+  var tempIndex = 0;
+  
+  // loop dan temukan angka terbesar, serta simpan tempIndex sebagai referensi lokasi angka, lalu push di variabel kosong
+  
+  for (i = 0; i < arrNumber.length; i++) {
+    if (arrNumber[i] > temp) {
+      temp = arrNumber[i];
+      tempIndex = i;
+    }
+  }
+
+  var res = [];
+  res.push(temp);
+
+  // gunakan tempIndex sebagai referensi untuk push angka2 lainnya selain yang sudah dimasukkan ke res
+
+  for (i = 0; i < arrNumber.length; i++) {
+    if (i !== tempIndex) {
+      res.push(arrNumber[i]);
+    }
+  }
 
   return res;
 }
 
 function getTotal(arrNumber) {
-  // cari frekuensi angka dari angka yang muncul di listSort
+
+  // cari frekuensi dari angka terbesar yang muncul di listSort
+  
   res = '';
 
-  if (arrNumber.length === 0) {
+  // base case ketika tidak ada input
+
+  if (arrNumber.length === 1) {
     return res;
   }
-  count = 0;
 
-  for (i = 0; i < arrNumber.length; i++) {
-    if (arrNumber[0] === arrNumber[i]) {
-      count++;
+  // loop untuk menghitung berapa kali angka tersebut muncul
+
+  else {
+    count = 0;
+
+    for (i = 0; i < arrNumber.length; i++) {
+      if (arrNumber[0] === arrNumber[i]) {
+        count++;
+      }
     }
-  }
-  res += "angka paling besar adalah " + arrNumber[0] + " dan jumlah kemunculan sebanyak " + count + " kali"
+    res += "angka paling besar adalah " + arrNumber[0] + " dan jumlah kemunculan sebanyak " + count + " kali"
 
-  return res;
+    return res;
+  }
+  
 }
 
 function mostFrequentLargestNumbers(arrNumber) {
