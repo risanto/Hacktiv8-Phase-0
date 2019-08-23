@@ -1,9 +1,19 @@
 // Urutkan Abjad
 
 function urutkanAbjad(str) {
-  var strArr = str.split('');
-  strArr = strArr.sort().join('');
-  return strArr;
+  
+  var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+  var res = '';
+
+  for (i = 0; i < alphabet.length; i++) {
+    for (j = 0; j < str.length; j++) {
+      if (alphabet[i] === str[j]) {
+        res += str[j];
+      }
+    }
+  }
+  return res;
 }
 
 // TEST CASES
