@@ -1,0 +1,111 @@
+1. Newton Second Law -------------------------------
+
+  -Algorithm-
+
+  1. Start by storing the resultant force as equal to mass times acceleration.
+  2. Calculate the resultant force when the mass is 600 (kg) and the acceleration is 2 (m/s2).
+
+
+  -Pseudocode-
+
+  STORE "mass" with any value
+  STORE "acceleration" with any value
+  STORE "resultant force" without any value
+
+  CALCULATE "mass" TIMES "acceleration"
+  SET "resultant force" value with calculation result
+
+  DISPLAY "resultant force"
+
+  >CALCULATION
+
+  STORE "mass" with 600
+  STORE "acceleration" with 2
+
+  CALCULATE 600 TIMES 2
+  SET "resultant force" value with 1200
+
+  DISPLAY 1200
+
+
+2. Leap Year ---------------------------------------
+
+  -Algorithm-
+
+  1. Start by storing the year with any number value.
+  2. Find the remainders through modulo operation which divides the year with 4, 100, and 400.
+  3. Set the following conditions.
+    a. If the year modulo 4, year modulo 100, and year modulo 100 has the remainder of 0; then the year is a leap year.
+    b. If the year modulo 4 is 0 but year modulo 100 is not 0; then the year is a leap year.
+    c. Else, it is not a leap year.
+  4. Display the result.
+
+
+  -Pseudocode-
+
+  STORE "year" with any number
+
+  CALCULATE "year" MOD 4 
+  STORE "remainder-1" to the result of calculation
+
+  CALCULATE "year" MOD 100 
+  STORE "remainder-2" to the result of calculation
+
+  CALCULATE "year" MOD 400 
+  STORE "remainder-3" to the result of calculation
+  
+  IF "remainder-1", "remainder-2", and "remainder-3" EQUAL to 0
+      DISPLAY "It is a leap year"
+
+  ELSE IF
+
+      "remainder-1" EQUALS to 0 AND "remainder-2" NOT EQUAL to 0
+      DISPLAY "It is a leap year"
+
+  ELSE
+
+      DISPLAY "It is not a leap year"
+
+
+3. Laundry Day -------------------------------------
+
+    -Algorithm-
+
+    1. Start by adding clothes to the washing machine until there are 20 clothes inside.
+    2. When the condition is fulfilled, turn on the washing machine.
+
+    -Pseudocode-
+
+    STORE "clothes" with 0
+
+    WHILE "clothes" < 20
+        ADD "clothes" by 1
+
+    TURN ON "washing machine"
+
+
+4. Nail check --------------------------------------
+
+    -Algorithm-
+
+    1. Start to check nails of each student in the class.
+    2. When checking, set the following conditions:
+      a. Long nails will be punished.
+      b. Short nails will be praised.  
+    3. Repeat until all 40 of the students nails are checked.
+
+    -Pseudocode-
+
+    STORE "student" with 1
+    SET variable "longNails"
+
+    WHILE "student" < 41
+        CHECK IF "longNails" EQUAL to TRUE
+        IF TRUE 
+            SHOW "punishment"
+
+        ELSE
+
+            SHOW "praise"
+
+        ADD "student" by 1
